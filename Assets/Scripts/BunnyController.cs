@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BunnyController : MonoBehaviour {
 
@@ -12,7 +13,7 @@ public class BunnyController : MonoBehaviour {
 	void Start () {
         myRigidBody2d = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -21,4 +22,10 @@ public class BunnyController : MonoBehaviour {
         }
         myAnimator.SetFloat("vVelocity", myRigidBody2d.velocity.y);
 	}
+
+    void OnCollisionEnter2D (Collision2D Collision) {
+        if (Collision.collider.gameObject.layer == LayerMask.NameToLayer("Obstacles")) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
 }
