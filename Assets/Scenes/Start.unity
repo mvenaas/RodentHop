@@ -120,7 +120,7 @@ GameObject:
   m_Layer: 0
   m_Name: CactusSpawnPoint
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -164,11 +164,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 63099370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.45, y: -3.08, z: 0}
+  m_LocalPosition: {x: 7.45, y: -3.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &66982445
 Prefab:
@@ -400,7 +400,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.9019608, g: 0.95686275, b: 0.98039216, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -541,11 +541,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 644331223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.96, y: -3.92, z: 0}
+  m_LocalPosition: {x: -11.88, y: -3.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &644331226
 MonoBehaviour:
@@ -578,6 +578,86 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &743571657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 743571659}
+  - component: {fileID: 743571658}
+  m_Layer: 0
+  m_Name: Mountain2Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &743571658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 743571657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066ed2418df1b9f49819be0a2a8175c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preFabToSpawn: {fileID: 4081385555529194, guid: e84840ad5b79d2943a6c16f67f09b982,
+    type: 2}
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: -0.103547215
+      value: 15.095605
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 24.40109
+      value: 19.986734
+      inSlope: 0.0008191839
+      outSlope: 0.0008191839
+      tangentMode: 34
+    - serializedVersion: 2
+      time: 49.70162
+      value: 14.978197
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 74.311
+      value: 19.993053
+      inSlope: 0.0047683716
+      outSlope: 0.0047683716
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 103.297485
+      value: 15.01281
+      inSlope: -0.0005492573
+      outSlope: -0.0005492573
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  curveLengthInSeconds: 50
+  jitter: 2
+--- !u!4 &743571659
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 743571657}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.25, y: -2.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &789806861
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,60 +745,98 @@ RectTransform:
   m_Children:
   - {fileID: 1411203330}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &837990262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 837990264}
+  - component: {fileID: 837990263}
+  m_Layer: 0
+  m_Name: Mountain3Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &837990263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 837990262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066ed2418df1b9f49819be0a2a8175c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preFabToSpawn: {fileID: 4944197919828078, guid: 0f391834598015340b3770f571031a73,
+    type: 2}
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: -0.103547215
+      value: 15.095605
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 24.40109
+      value: 19.986734
+      inSlope: 0.0008191839
+      outSlope: 0.0008191839
+      tangentMode: 34
+    - serializedVersion: 2
+      time: 49.70162
+      value: 14.978197
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 74.311
+      value: 19.993053
+      inSlope: 0.0047683716
+      outSlope: 0.0047683716
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 103.297485
+      value: 15.01281
+      inSlope: -0.0005492573
+      outSlope: -0.0005492573
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  curveLengthInSeconds: 60
+  jitter: 10
+--- !u!4 &837990264
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 837990262}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.88, y: -2.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &919835131 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4293571980529542, guid: b82940280b852af4e90539f5aeb49f6d,
     type: 2}
   m_PrefabInternal: {fileID: 261931944}
---- !u!1001 &951193907
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4465767228315470, guid: caba8af249929564bb1ce1bb8fc7150a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -5.3524504
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465767228315470, guid: caba8af249929564bb1ce1bb8fc7150a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.0667794
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465767228315470, guid: caba8af249929564bb1ce1bb8fc7150a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465767228315470, guid: caba8af249929564bb1ce1bb8fc7150a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465767228315470, guid: caba8af249929564bb1ce1bb8fc7150a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465767228315470, guid: caba8af249929564bb1ce1bb8fc7150a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465767228315470, guid: caba8af249929564bb1ce1bb8fc7150a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465767228315470, guid: caba8af249929564bb1ce1bb8fc7150a, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: caba8af249929564bb1ce1bb8fc7150a, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &992610638
 Prefab:
   m_ObjectHideFlags: 0
@@ -830,13 +948,93 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1137591878 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4293571980529542, guid: b82940280b852af4e90539f5aeb49f6d,
     type: 2}
   m_PrefabInternal: {fileID: 1740520885}
+--- !u!1 &1193369420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1193369422}
+  - component: {fileID: 1193369421}
+  m_Layer: 0
+  m_Name: Cloud5Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1193369421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1193369420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066ed2418df1b9f49819be0a2a8175c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preFabToSpawn: {fileID: 4590689230124922, guid: d0d0372337c88364fad88d31c3756acb,
+    type: 2}
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: -0.103547215
+      value: 15.095605
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 24.40109
+      value: 19.986734
+      inSlope: 0.0008191839
+      outSlope: 0.0008191839
+      tangentMode: 34
+    - serializedVersion: 2
+      time: 49.70162
+      value: 14.978197
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 74.311
+      value: 19.993053
+      inSlope: 0.0047683716
+      outSlope: 0.0047683716
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 103.297485
+      value: 15.01281
+      inSlope: -0.0005492573
+      outSlope: -0.0005492573
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  curveLengthInSeconds: 60
+  jitter: 5
+--- !u!4 &1193369422
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1193369420}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.21, y: 1.28, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1219894140
 Prefab:
   m_ObjectHideFlags: 0
@@ -883,6 +1081,80 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b82940280b852af4e90539f5aeb49f6d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1279844699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1279844701}
+  - component: {fileID: 1279844700}
+  m_Layer: 0
+  m_Name: Cloud4Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1279844700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1279844699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066ed2418df1b9f49819be0a2a8175c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preFabToSpawn: {fileID: 4582176787877030, guid: da9129f5001e02741b399c2982e069bc,
+    type: 2}
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: -0.30058396
+      value: 10.040612
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 28.003288
+      value: 35.78745
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 83.64314
+      value: 35.684708
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 105.11322
+      value: 9.97863
+      inSlope: -0.0005492573
+      outSlope: -0.0005492573
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  curveLengthInSeconds: 60
+  jitter: 5
+--- !u!4 &1279844701
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1279844699}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.58, y: 3.78, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1321603496 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4293571980529542, guid: b82940280b852af4e90539f5aeb49f6d,
@@ -1005,7 +1277,7 @@ Transform:
   - {fileID: 1321603496}
   - {fileID: 919835131}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1593033802
 Prefab:
@@ -1308,7 +1580,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2007531864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1420,11 +1692,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2007531863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.86532, y: -2.7894, z: 0}
+  m_LocalPosition: {x: -3.12, y: -2.7894, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2007531869
 Animator:
@@ -1448,3 +1720,83 @@ Transform:
   m_PrefabParentObject: {fileID: 4293571980529542, guid: b82940280b852af4e90539f5aeb49f6d,
     type: 2}
   m_PrefabInternal: {fileID: 1636586630}
+--- !u!1 &2140877047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2140877049}
+  - component: {fileID: 2140877048}
+  m_Layer: 0
+  m_Name: Mountain1Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2140877048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2140877047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066ed2418df1b9f49819be0a2a8175c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preFabToSpawn: {fileID: 4738365357800312, guid: 805a2d917ca7502478035c26ed7d2efe,
+    type: 2}
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: -0.103547215
+      value: 15.095605
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 24.40109
+      value: 19.986734
+      inSlope: 0.0008191839
+      outSlope: 0.0008191839
+      tangentMode: 34
+    - serializedVersion: 2
+      time: 49.70162
+      value: 14.978197
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 74.311
+      value: 19.993053
+      inSlope: 0.0047683716
+      outSlope: 0.0047683716
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 103.297485
+      value: 15.01281
+      inSlope: -0.0005492573
+      outSlope: -0.0005492573
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  curveLengthInSeconds: 40
+  jitter: 5
+--- !u!4 &2140877049
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2140877047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.21, y: -2.35, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
