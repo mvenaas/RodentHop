@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bunnyJumpForce: 250
+  scoreText: {fileID: 0}
 --- !u!212 &212014791062189248
 SpriteRenderer:
   m_ObjectHideFlags: 1
