@@ -14,6 +14,8 @@ public class BunnyController : MonoBehaviour {
     public Text scoreText;
     private float startTime;
     private int jumpsLeft = 2;
+    public AudioSource jumpSfx;
+    public AudioSource deathSfx; 
 
     // Use this for initialization
     void Start () {
@@ -25,6 +27,10 @@ public class BunnyController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            SceneManager.LoadScene("TitleScreen");
+        }
 
         if (bunnyHurtTime == -1)
         {
@@ -38,6 +44,7 @@ public class BunnyController : MonoBehaviour {
 
                 myRigidBody2d.AddForce(transform.up * bunnyJumpForce);
                 jumpsLeft--;
+                jumpSfx.Play();
             }
             myAnimator.SetFloat("vVelocity", myRigidBody2d.velocity.y);
             scoreText.text = (Time.time - startTime).ToString("0.0");
@@ -68,6 +75,7 @@ public class BunnyController : MonoBehaviour {
             myRigidBody2d.velocity = Vector2.zero;
             myRigidBody2d.AddForce(transform.up * bunnyJumpForce);
             myCollider.enabled = false;
+            deathSfx.Play();
         }
 
         if (Collision.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
